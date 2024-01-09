@@ -46,7 +46,7 @@ const Header = () => {
             <Link href={'/about'}>About</Link>
             <Link href={'/blogs/page/1'}>Pricing</Link>
             <Link href={'/blogs/page/1'}>Love for WR</Link>
-            <Link href={'/blogs/page/1'}>Blogs</Link>
+            <Link href={'/blogs/page/1'}>Blog</Link>
             <Link href={'/blogs/page/1'}>Career</Link>
             <Link href={'/blogs/page/1'}>Contact</Link>
           </div>
