@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Logo from '@/components/logo';
+import Logo, { LogoMobile } from '@/components/logo';
 import ThemeToggle from '@/styles/next-toggle';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import Link from 'next/link';
+import Button from '../button';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,16 +27,35 @@ const Header = () => {
       <div
         className={`absolute w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-asparagus-400 dark:bg-firefly-500 shadow-lg bg-opacity-95 dark:bg-opacity-95'
-            : 'bg-asparagus-500 dark:bg-firefly-500 shadow-lg hover:shadow-asparagus-300 transition-all bg-opacity-95 dark:bg-opacity-95 duration-300 dark:hover:shadow-firefly-700'
+            ? 'bg-firefly-950 dark:bg-firefly-950 shadow-lg bg-opacity-95 dark:bg-opacity-95'
+            : 'bg-firefly-950 dark:bg-firefly-950 shadow-lg hover:shadow-firefly-600 transition-all bg-opacity-95 dark:bg-opacity-95 duration-300 dark:hover:shadow-firefly-700'
         }`}
         style={{ transitionDelay: isScrolled ? '0s' : '0.3s' }}
       >
         <div className='max-w-7xl mx-auto flex items-center justify-between px-3'>
-          <Link href='/'>
-            <Logo />
-          </Link>
+          <div>
+            <Link href='/' className='hidden md:block'>
+              <Logo />
+            </Link>
+            <Link href='/' className='md:hidden'>
+              <LogoMobile />
+            </Link>
+          </div>
+          <div className='font-lexend font-light space-x-6 text-white text-sm md:text-base hidden md:block'>
+            <Link href={'/'}>Home</Link>
+            <Link href={'/about'}>About</Link>
+            <Link href={'/blogs/page/1'}>Pricing</Link>
+            <Link href={'/blogs/page/1'}>Love for WR</Link>
+            <Link href={'/blogs/page/1'}>Blogs</Link>
+            <Link href={'/blogs/page/1'}>Career</Link>
+            <Link href={'/blogs/page/1'}>Contact</Link>
+          </div>
           <div className='flex items-center justify-center space-x-3'>
+            <Link href={'/download'}>
+              <Button additionalClasses='' size='sm'>
+                Download
+              </Button>
+            </Link>
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}

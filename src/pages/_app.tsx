@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider>
         <DarkModeThemeProvider attribute='class' defaultTheme='dark'>
-          <div className='bg-gray-100 dark:bg-firefly-500'>
+          <div className='bg-gray-100 dark:bg-firefly-950 min-h-screen'>
             <Header />
             <Component {...pageProps} />
             <Footer />

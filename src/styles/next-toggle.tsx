@@ -21,14 +21,14 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className={`rounded-md transition-all duration-500 w-8 h-8 flex items-center justify-center`}
+      className={`rounded-md transition-all duration-500 w-7 h-7 flex items-center justify-center`}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
-      <div className={`icon-container ${theme}`}>
+      <div className={`flex items-center justify-center ml-3 ${theme}`}>
         {theme === 'light' ? (
-          <RxSun className='w-8 h-8 text-firefly-100 sun' />
+          <RxSun className='w-7 h-7 text-firefly-100 sun' />
         ) : (
-          <MdNightsStay className='w-8 h-8 text-asparagus-500 moon' />
+          <MdNightsStay className='w-7 h-7 text-asparagus-400 moon' />
         )}
       </div>
     </button>

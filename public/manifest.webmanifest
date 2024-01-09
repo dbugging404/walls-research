@@ -1,0 +1,49 @@
+{
+  "name": "Walls Research",
+  "short_name": "Walls Research - App",
+  "theme_color": "#60a744",
+  "start_url": "/",
+  "background_color": "#142C34",
+  "display": "minimal-ui",
+  "description": "Walls Research - App",
+  "icons": [
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-270x270.png",
+      "sizes": "270x270",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-558x270.png",
+      "sizes": "558x270",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-558x558.png",
+      "sizes": "558x558",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-2.png",
+      "sizes": "1903x913",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/images/screenshot-1.png",
+      "sizes": "379x676",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
