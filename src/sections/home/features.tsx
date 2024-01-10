@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import FeaturesImage from '@/assets/images/guy-with-laptop.png';
+import FeaturesImage from '@/assets/images/features.svg';
 import { CgProfile } from 'react-icons/cg';
-import { Button } from '@material-tailwind/react';
+import Button from '@/components/button';
 
 const Features = () => {
   return (
@@ -10,22 +10,24 @@ const Features = () => {
       <div className='max-w-7xl mx-auto flex items-start justify-center'>
         <div className='grid lg:grid-cols-2 gap-5'>
           <div className='flex flex-col items-center lg:items-start justify-center'>
-            <h2 className='font-lexend text-4xl lg:text-5xl text-firefly-800 dark:text-firefly-100'>
-              Stress Free Trading
+            <h2 className='font-lexend text-3xl lg:text-4xl text-firefly-800 dark:text-firefly-100'>
+              Smart Investing, Simplified!
             </h2>
             <div className='text-firefly-800 dark:text-firefly-100 mt-6 font-lexend text-center lg:text-left'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              similique, magni impedit corporis quo unde. Adipisci minus aperiam
-              velit vero?
+              Unleash the power of data for strategic investing. Our tools offer
+              a seamless experience—track dividends, compare companies, and stay
+              ahead of market movements
             </div>
-            <div className='grid grid-cols-2 gap-4'>
+            <div className='grid md:grid-cols-2 gap-4'>
               {data.map((item) => (
                 <div
-                  className='flex items-center justify-start space-x-3 mt-10 text-firefly-800 dark:text-firefly-100 font-lexend'
+                  className='grid grid-cols-5 space-x-3 mt-10 text-firefly-900 dark:text-firefly-100 font-lexend hover:bg-firefly-200 dark:hover:bg-firefly-900 p-2 rounded-md cursor-pointer transition duration-300 ease-in-out'
                   key={item.id}
                 >
-                  <CgProfile className='w-8 h-8 text-asparagus-500' />
-                  <div className='flex flex-col items-start justify-center'>
+                  <div className='flex items-center justify-center'>
+                    <CgProfile className='w-8 h-8 text-asparagus-500 col-span-1 ' />
+                  </div>
+                  <div className='flex flex-col items-start justify-center col-span-4'>
                     <h3 className='text-lg font-bold'>{item.title}</h3>
                     <p className='text-firefly-800 dark:text-firefly-100'>
                       {item.description}
@@ -35,22 +37,16 @@ const Features = () => {
               ))}
             </div>
             <div className='mt-8 md:mt-14'>
-              <Button
-                className='font-medium font-lexend rounded-full bg-asparagus-500 hover:bg-asparagus-400 border-transparent transition-all duration-150'
-                placeholder={'Learn More'}
-                variant='filled'
-                size='lg'
-                ripple
-              >
+              <Button additionalClasses='' placeholder={'Learn More'} size='md'>
                 Learn More
               </Button>
             </div>
           </div>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center mx-auto'>
             <Image
               src={FeaturesImage}
               alt='Features Image'
-              className='w-screen rounded-lg sm:max-w-xl'
+              className='rounded-lg md:max-w-sm h-80 md:h-auto object-cover object-top'
             />
           </div>
         </div>
@@ -64,38 +60,41 @@ export default Features;
 const data = [
   {
     id: 1,
-    title: 'Stress Free Trading',
-    description: 'Lorem ipsum dolor sit',
-    icon: '',
+    title: 'WR Assessment',
+    description: 'Concise summary of the business performance of the company',
+    icon: 'appropriate_icon_reference',
   },
   {
     id: 2,
-    title: 'Stress Free Trading',
-    description: 'Lorem ipsum dolor sit',
-    icon: '',
+    title: 'Compare',
+    description:
+      'Compare two companies and see how they are placed against each other.',
+    icon: 'appropriate_icon_reference',
   },
   {
     id: 3,
-    title: 'Stress Free Trading',
-    description: 'Lorem ipsum dolor sit',
-    icon: '',
+    title: 'Watchlist',
+    description: 'Add and track companies in which you are interested.',
+    icon: 'appropriate_icon_reference',
   },
   {
     id: 4,
-    title: 'Stress Free Trading',
-    description: 'Lorem ipsum dolor sit',
-    icon: '',
+    title: 'Dividend List',
+    description:
+      "Which company and what's the current yield. All in one place.",
+    icon: 'appropriate_icon_reference',
   },
   {
     id: 5,
-    title: 'Stress Free Trading',
-    description: 'Lorem ipsum dolor sit',
-    icon: '',
+    title: 'Latest News',
+    description:
+      "Capture what's happening in and around the business and economy.",
+    icon: 'appropriate_icon_reference',
   },
   {
     id: 6,
-    title: 'Stress Free Trading',
-    description: 'Lorem ipsum dolor sit',
-    icon: '',
+    title: 'Earnings Assessment',
+    description: 'Preview of upcoming earnings and performance.',
+    icon: 'appropriate_icon_reference',
   },
 ];

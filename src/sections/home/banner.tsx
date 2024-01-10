@@ -12,12 +12,16 @@ const Banner = () => {
       <div className='max-w-7xl h-full mx-auto pt-32 z-10'>
         <div className='grid grid-cols-1 xl:grid-cols-2'>
           <div className='px-3 flex items-start justify-center flex-col max-w-4xl mx-auto'>
-            <div className='text-5xl lg:text-6xl font-bold font-lexend text-firefly-700 dark:text-firefly-100 pt-16 pb-8'>
+            <div className='text-3xl lg:text-4xl font-bold font-lexend text-firefly-700 dark:text-firefly-100 pt-16 pb-4'>
               <h1 className=''>
-                Stay ahead of the Pack when it comes to investment
+                Discover a New Era of Stock Investing with Walls Research -
               </h1>
+              <p className='text-lg mt-4 font-medium'>
+                Where Extensive Knowledge Meets Intelligent Algorithmic Insights
+                for Unmatched Wealth Growth.
+              </p>
             </div>
-            <div className='text-base lg:text-lg text-firefly-800 dark:text-firefly-100'>
+            <div className='text-base text-firefly-800 dark:text-firefly-100'>
               <div className='font-lexend font-light space-y-2'>
                 <div>
                   Walls Research team provides you with our extensive research

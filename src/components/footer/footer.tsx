@@ -34,7 +34,7 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className='relative w-full py-6 md:py-8 lg:py-10 bg-firefly-950'>
+    <footer className='relative w-full border-t border-firefly-600 py-6 md:py-8 lg:py-10 bg-firefly-950'>
       <div className='mx-auto w-full max-w-7xl px-4 md:px-6 lg:px-8'>
         <div className='grid grid-cols-1 justify-between gap-4 md:grid-cols-2'>
           <div className='flex py-4 md:flex-col items-start justify-start space-x-2 md:space-x-0'>

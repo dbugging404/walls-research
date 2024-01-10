@@ -11,7 +11,7 @@ const Faq = () => {
   const handleOpen = (value: any) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className='bg-firefly-100 dark:bg-firefly-600 px-3 py-6 md:py-8 lg:py-10'>
+    <div className='bg-firefly-100 dark:bg-firefly-900 px-3 py-6 md:py-8 lg:py-10'>
       <div className='max-w-7xl mx-auto'>
         <div className='max-w-4xl mx-auto'>
           <h3 className='text-3xl lg:text-4xl font-lexend py-6 lg:py-10 text-center font-bold text-firefly-800 dark:text-firefly-100'>
@@ -22,20 +22,20 @@ const Faq = () => {
               open={open === item.id}
               key={item.id}
               placeholder={''}
-              className='mb-2 rounded-lg border border-gray-400 dark:border-gray-600 px-4'
+              className='mb-2 rounded-lg border border-firefly-400 dark:border-gray-600 overflow-hidden'
             >
               <AccordionHeader
                 placeholder={''}
                 onClick={() => handleOpen(item.id)}
                 className={`border-b-0 transition-colors ${
                   open === item.id
-                    ? 'font-lexend font-medium text-asparagus-400 dark:text-asparagus-500 hover:text-asparagus-500 dark:hover:text-asparagus-400'
-                    : 'font-lexend font-light text-firefly-800 dark:text-firefly-100 hover:text-firefly-400 dark:hover:text-firefly-300'
+                    ? 'font-lexend font-medium bg-gradient-to-b from-asparagus-500 to-asparagus-700 text-white px-4 hover:text-firefly-50'
+                    : 'font-lexend font-normal text-base text-firefly-800 px-4 dark:text-firefly-100 hover:text-firefly-400 dark:hover:text-firefly-300'
                 }`}
               >
                 {item.question}
               </AccordionHeader>
-              <AccordionBody className='pt-0 text-base font-inter font-normal text-firefly-800 dark:text-firefly-200'>
+              <AccordionBody className='pt-2 text-base font-lexend font-light text-firefly-800 dark:text-firefly-200 px-4'>
                 {item.answer}
               </AccordionBody>
             </Accordion>
