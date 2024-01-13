@@ -7,6 +7,7 @@ import Reviews from '@/sections/home/reviews';
 import { NextPage } from 'next';
 import React from 'react';
 import Animate from '@/components/animate';
+import TwitterFeed from '@/sections/home/TwitterFeed';
 
 const IndexPage: NextPage = () => {
   return (

@@ -6,32 +6,11 @@ import Link from 'next/link';
 import Button from '../button';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      // Change the threshold value as needed
-      setIsScrolled(scrollTop > 50);
-    };
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
   return (
     <div className='sticky top-0 z-50 w-full'>
-      <div
-        className={`absolute w-full transition-all duration-300 ${
-          isScrolled
-            ? 'bg-firefly-950 dark:bg-firefly-950 shadow-lg bg-opacity-95 dark:bg-opacity-95'
-            : 'bg-firefly-950 dark:bg-firefly-950 shadow-lg hover:shadow-firefly-950 dark:hover:shadow-firefly-800 transition-all bg-opacity-95 dark:bg-opacity-95 duration-300'
-        }`}
-        style={{ transitionDelay: isScrolled ? '0s' : '0.3s' }}
-      >
+      <div className='bg-firefly-900 dark:bg-firefly-950 border-b dark:border-firefly-800 border-firefly-200 bg-opacity-95 dark:bg-opacity-95'>
         <div className='max-w-7xl mx-auto flex items-center justify-between px-3'>
           <div>
             <Link href='/' className='hidden md:block'>
@@ -41,7 +20,7 @@ const Header = () => {
               <LogoMobile />
             </Link>
           </div>
-          <div className='font-lexend font-light space-x-6 text-white text-sm md:text-base hidden md:block'>
+          <div className='font-lexend font-light space-x-6 text-white text-sm md:text-base hidden lg:block'>
             <Link href={'/'}>Home</Link>
             <Link href={'/wr-score'}>WR Score</Link>
             <Link href={'/blogs/page/1'}>Pricing</Link>

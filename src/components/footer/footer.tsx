@@ -37,17 +37,20 @@ const Footer = () => {
     <footer className='relative w-full border-t border-firefly-600 py-6 md:py-8 lg:py-10 bg-firefly-950'>
       <div className='mx-auto w-full max-w-7xl px-4 md:px-6 lg:px-8'>
         <div className='grid grid-cols-1 justify-between gap-4 md:grid-cols-2'>
-          <div className='flex py-4 md:flex-col items-start justify-start space-x-2 md:space-x-0'>
-            <div className='flex items-center justify-center h-full'>
+          <div className='flex py-4 w-full md:flex-col items-start justify-start space-x-2 md:space-x-0'>
+            <div className='flex items-center justify-center h-full mx-auto md:mx-0 pb-0 md:pb-2'>
               <Image
                 src={WallsResearchDesktop}
                 alt='Walls Research'
                 className='p-2 fill-white grayscale brightness-0 invert flex items-center justify-center'
               />
             </div>
-            <div className='md:pt-6'>
+            <div className='hidden md:block'>
               <Download />
             </div>
+          </div>
+          <div className='md:hidden flex items-center justify-center mx-auto pb-6 md:pb-6'>
+            <Download />
           </div>
           <div className='grid grid-cols-2 md:grid-cols-4 justify-between items-center text-center md:text-left gap-4'>
             {LINKS.map(({ title, items }) => (

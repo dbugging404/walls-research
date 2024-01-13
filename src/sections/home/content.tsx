@@ -8,9 +8,9 @@ import TeamIcon from '@/assets/icons/team.svg';
 
 const Content = () => {
   return (
-    <div className='bg-firefly-100 dark:bg-firefly-900 text-firefly-800 dark:text-firefly-100'>
+    <div className='bg-firefly-100 dark:bg-firefly-950  text-firefly-800 dark:text-firefly-100'>
       <div className='mx-auto'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
+        <div className='grid grid-cols-1 lg:grid-cols-2'>
           <div className='w-full flex items-center justify-center bg-firefly-900'>
             <Image
               src={screenshot}
@@ -18,14 +18,15 @@ const Content = () => {
               className='w-screen rounded-lg max-w-lg mx-auto lg:mx-0 p-6 md:p-0'
             />
           </div>
-          <div className='max-w-xl flex flex-col mx-auto lg:mx-0 justify-center py-6 md:py-8 lg:py-10 px-6'>
-            <div className='text-center lg:text-justify text-firefly-800 dark:text-firefly-100'>
+          <div className='flex flex-col mx-auto lg:mx-0 justify-center py-6 md:py-8 lg:py-10 px-6 border-t border-b dark:border-firefly-900 inset-0'>
+            <div className='max-w-xl text-center lg:text-justify text-firefly-800 dark:text-firefly-100'>
               <h3 className='text-5xl sm:text-3xl font-lexend pb-6'>
-                Insights that guide your investing decisions...
+                Expert Analysis at your Fingertips...
               </h3>
               <div className='text-lg font-lexend pb-6 font-light'>
-                ...with Walls Research&apos;s proprietary algorithm. We do the
-                hard work for you.
+                Walls Research team provides you with our extensive research
+                knowledge in equities, ensuring that we become your trusted
+                partner in the pursuit of wealth creation.
               </div>
               <div className='space-y-2 mt-8'>
                 {data.map((item) => (

@@ -49,13 +49,17 @@ const Features = () => {
               </Button>
             </div>
           </div>
-          <div className='flex items-center justify-center mx-auto'>
+
+          <figure className='flex flex-col items-center justify-center mx-auto'>
             <Image
               src={FeaturesImage}
               alt='Features Image'
               className='rounded-lg md:max-w-sm h-80 md:h-auto object-cover object-top'
             />
-          </div>
+            <figcaption className='text-center text-xs font-lexend pt-4 text-firefly-800 dark:text-firefly-100'>
+              Walls Research App
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>

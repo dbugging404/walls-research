@@ -1,19 +1,22 @@
+import Image from 'next/image';
 import React from 'react';
+import wrScore from '@/assets/images/wrScore.svg';
+import wrScoreMoble from '@/assets/images/wrScoreMobile.svg';
 
 const IndexPage = () => {
   return (
     <div className='bg-white dark:bg-firefly-950'>
       <div className='max-w-7xl mx-auto px-3'>
-        <div className='py-24'>
-          <h1 className='font-lexend text-4xl lg:text-5xl py-10 font-bold'>
+        <div className='pb-8'>
+          <h1 className='font-lexend text-4xl lg:text-5xl pb-10 pt-6 font-bold text-center'>
             WR Score
           </h1>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
             <div className='flex flex-col items-start justify-center font-lexend px-3 space-y-4 dark:text-firefly-100 text-firefly-800'>
-              <h2 className='text-3xl font-bold bg-gradient-to-b from-asparagus-500 to-asparagus-700 rounded-full px-5 py-1.5'>
+              <h2 className='text-3xl font-bold bg-gradient-to-b from-asparagus-500 to-asparagus-700 rounded-full px-5 py-1.5 text-firefly-100'>
                 How it works:
               </h2>
-              <div className='text-lg underline'>Quantitative Analysis:</div>
+              <div className='text-lg underline '>Quantitative Analysis:</div>
               <ul className='space-y-2 list-outside list-disc font-base'>
                 <li>
                   Dive deep into a company&apos;s financial health through a
@@ -39,12 +42,12 @@ const IndexPage = () => {
               <div className='text-lg underline'>Global Reach:</div>
               <ul className='space-y-2 list-outside list-disc font-base'>
                 <li>
-                  ur insights are not confined to a specific market. Extend your
-                  investment horizons with analysis that transcends global stock
-                  exchanges.
+                  Our insights are not confined to a specific market. Extend
+                  your investment horizons with analysis that transcends global
+                  stock exchanges.
                 </li>
               </ul>
-              <h2 className='text-3xl font-bold bg-gradient-to-b from-asparagus-500 to-asparagus-700 rounded-full px-5 py-1.5'>
+              <h2 className='text-3xl font-bold bg-gradient-to-b from-asparagus-500 to-asparagus-700 rounded-full px-5 py-1.5 text-firefly-100'>
                 The Power of Insights:
               </h2>
               <div className='text-lg underline'>
@@ -76,7 +79,7 @@ const IndexPage = () => {
                   intricacies of company performance.
                 </li>
               </ul>
-              <h2 className='text-3xl font-bold bg-gradient-to-b from-asparagus-500 to-asparagus-700 rounded-full px-5 py-1.5'>
+              <h2 className='text-3xl font-bold bg-gradient-to-b from-asparagus-500 to-asparagus-700 rounded-full px-5 py-1.5 text-firefly-100'>
                 Why Choose WR:
               </h2>
               <div className='text-lg underline'>Simplicity Redefined:</div>
@@ -104,7 +107,25 @@ const IndexPage = () => {
                 </li>
               </ul>
             </div>
-            <div></div>
+            <div>
+              <div className='text-center font-lexend text-xl font-bold py-4'>
+                How does it work ?
+              </div>
+              <Image
+                src={wrScore}
+                alt='How Does it work?'
+                width={500}
+                height={500}
+                className='hidden lg:block md:w-full md:h-2/3 object-cover'
+              />
+              <Image
+                src={wrScoreMoble}
+                alt='How Does it work?'
+                width={500}
+                height={500}
+                className='block lg:hidden md:w-full md:h-2/3 object-cover'
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -6,15 +6,16 @@ import Arrow from '@/assets/icons/arrow.svg';
 import GooglePlayIcon from '@/assets/logos/google-play-icon.svg';
 import AppleAppStoreIcon from '@/assets/logos/apple-app-store.svg';
 import qrCode from '@/assets/images/dwl_qr_code.svg';
+import { Button } from '@material-tailwind/react';
 
 const IndexPage = () => {
   return (
-    <div>
-      <div className='bg-white dark:bg-firefly-950 relative flex items-center justify-center overflow-hidden py-24'>
-        <div className='relative mx-auto h-full px-4  pb-20   md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 py-16 gap-8'>
-            <div className='relative flex items-start justify-center flex-col'>
-              <div className=' absolute top-0 -left-48 z-0 opacity-50'>
+    <div className='min-h-screen relative'>
+      <div className='bg-white dark:bg-firefly-950 flex items-center justify-center overflow-hidden py-6 md:py-8 lg:pt-0'>
+        <div className='max-w-7xl mx-auto h-full px-4 lg:px-8'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 py-6'>
+            <div className='relative flex items-center lg:items-start justify-center flex-col'>
+              <div className='absolute top-0 -left-48 z-0 opacity-50'>
                 <Image
                   src={Arrow}
                   className='w-24 h-full object-fill'
@@ -23,60 +24,62 @@ const IndexPage = () => {
                   alt='about'
                 />
               </div>
-              <h2 className='mb-6 max-w-lg text-5xl font-light leading-snug tracking-tight font-lexend sm:text-5xl sm:leading-snug'>
+              <h2 className='mb-4 max-w-lg text-4xl font-light leading-snug tracking-tight font-lexend text-center lg:text-left'>
                 Let us help you{' '}
                 <span className='bg-clip-text text-transparent bg-gradient-to-b from-asparagus-500 to-asparagus-700 font-bold font-lexend animate-pulse'>
                   Supercharge{' '}
                 </span>
                 your investing experience
               </h2>
-              <div className='text-base text-firefly-800 dark:text-firefly-100 font-lexend pb-6'>
+              <div className='text-base text-firefly-800 dark:text-firefly-100 font-lexend pb-6 text-center lg:text-left'>
                 Elevate your investing journey and make informed decisions with
                 our user-friendly platform designed to supercharge your
                 financial success.
-                <div className='pt-4'>
-                  Download now and embark on a smarter, more rewarding investing
-                  experience.
-                </div>
               </div>
-              <div className='flex flex-col items-center justify-center w-full h-full bg-firefly-900 py-6 rounded-lg'>
-                <div className='pb-6 font-lexend font-sm'>
+              <div className='flex flex-col max-w-lg items-center justify-center p-6 w-full dark:bg-firefly-900 bg-firefly-200 rounded-lg z-10'>
+                <div className='pb-3 font-lexend font-sm'>
                   (Scan the QR code to download the App)
                 </div>
                 <Image src={qrCode} alt='QR Code' />
-                <div className='pt-6 font-lexend'>Available on</div>
-                <div className='mt-6 flex flex-col items-center md:flex-row md:space-x-3'>
-                  <Link
-                    href={'#'}
-                    className='border px-4 py-2 font-lexend border-firefly-500 hover:border-transparent rounded-md text-base font-bold text-firefly-800 dark:text-firefly-100 hover:bg-asparagus-300 dark:hover:bg-asparagus-500 transition duration-300 ease-in-out hover:shadow-lg'
+                <div className='pt-3 font-lexend'>Available on</div>
+                <div className='mt-3 flex flex-col items-center md:flex-row md:space-x-3 space-y-3 md:space-y-0'>
+                  <Button
+                    placeholder={''}
+                    ripple
+                    className='border font-lexend border-firefly-500 hover:border-transparent rounded-md text-base font-bold text-firefly-100 hover:bg-asparagus-300 dark:hover:bg-asparagus-500 transition duration-300 ease-in-out hover:shadow-lg'
                   >
-                    <div className='flex items-center justify-center space-x-3'>
-                      <Image
-                        src={GooglePlayIcon}
-                        alt='Google Play Icon'
-                        className='w-8 h-8'
-                      />
-                      <span>Download</span>
-                    </div>
-                  </Link>
+                    <Link href={'#'} className=''>
+                      <div className='flex items-center justify-center space-x-3'>
+                        <Image
+                          src={GooglePlayIcon}
+                          alt='Google Play Icon'
+                          className='w-8 h-8'
+                        />
+                        <span>Download</span>
+                      </div>
+                    </Link>
+                  </Button>
 
-                  <Link
-                    href={'#'}
-                    className='border px-4 py-2 font-lexend border-firefly-500 hover:border-transparent rounded-md text-base font-bold text-firefly-800 dark:text-firefly-100 hover:bg-asparagus-300 dark:hover:bg-asparagus-500 transition duration-300 ease-in-out hover:shadow-lg'
+                  <Button
+                    placeholder={''}
+                    ripple
+                    className='border font-lexend border-firefly-500 hover:border-transparent rounded-md text-base font-bold text-firefly-100 hover:bg-asparagus-300 dark:hover:bg-asparagus-500 transition duration-300 ease-in-out hover:shadow-lg'
                   >
-                    <div className='flex items-center justify-center space-x-3'>
-                      <Image
-                        src={AppleAppStoreIcon}
-                        alt='Google Play Icon'
-                        className='w-8 h-8'
-                      />
-                      <span>Download</span>
-                    </div>
-                  </Link>
+                    <Link href={'#'} className=''>
+                      <div className='flex items-center justify-center space-x-3'>
+                        <Image
+                          src={AppleAppStoreIcon}
+                          alt='Google Play Icon'
+                          className='w-8 h-8'
+                        />
+                        <span>Download</span>
+                      </div>
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>
-            <div className='hidden lg:flex items-center justify-center w-screen max-w-4xl'>
+            <div className='hidden lg:flex items-center justify-center w-screen max-w-4xl relative'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='my-6 mx-auto h-10 w-10 animate-bounce rounded-full bg-white p-2 lg:hidden'
@@ -91,22 +94,19 @@ const IndexPage = () => {
                   d='M16 17l-4 4m0 0l-4-4m4 4V3'
                 ></path>
               </svg>
-              <div className=''>
+              <div className='absolute w-full lg:mr-72'>
                 <Image
                   src={downloadImage}
                   alt='download'
                   width={1920}
                   height={500}
-                  className='scale-125'
+                  className='w-full h-full object-fill scale-125 pt-10 z-10'
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className='hidden text-9xl varien absolute top-6 left-1/4 text-g/10 z-40    '>
-          About Us
-        </div>
-        <div className=' absolute -bottom-24 left-10 z-0  opacity-10 '>
+        <div className=' absolute -bottom-24 left-10 -z-0  opacity-10'>
           <svg
             width='800px'
             height='800px'

@@ -6,7 +6,7 @@ const TwitterFeed: React.FC = () => {
       <h2>Latest Tweets</h2>
       <a
         className='twitter-timeline'
-        href='https://twitter.com/@wallsresearch'
+        href='https://twitter.com/wallsresearch'
         target='_blank'
         rel='noreferrer'
         data-height='400'

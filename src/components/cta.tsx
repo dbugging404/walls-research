@@ -24,7 +24,7 @@ const CTA = () => {
                 mastery begins here.
               </p>
               <div className='mt-10 flex items-center justify-center gap-x-6 lg:justify-start font-lexend'>
-                <Link href='#'>
+                <Link href='/download'>
                   <Button
                     placeholder={''}
                     className='rounded-full font-lexend bg-gradient-to-b dark:bg-gradient-to-b dark:from-asparagus-500 dark:to-asparagus-700 from-firefly-600 to-firefly-900 dark:hover:from-asparagus-600 dark:hover:to-asparagus-800 hover:from-firefly-700 hover:to-firefly-800'
@@ -33,7 +33,7 @@ const CTA = () => {
                   </Button>
                 </Link>
                 <Link
-                  href='#'
+                  href='/wr-score'
                   className='text-sm font-semibold leading-6 text-white'
                 >
                   Learn more <span aria-hidden='true'>→</span>
