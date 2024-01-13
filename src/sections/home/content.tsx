@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import screenshot from '@/assets/images/content.svg';
-import { CgProfile } from 'react-icons/cg';
 import { HiChevronRight } from 'react-icons/hi';
 import FeaturesIcon from '@/assets/icons/features.svg';
-import PricingIcon from '@/assets/icons/pricing.svg';
+import PricingIcon from '@/assets/icons/Pricing.svg';
 import TeamIcon from '@/assets/icons/team.svg';
 
 const Content = () => {
