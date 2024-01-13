@@ -3,6 +3,7 @@ import Image from 'next/image';
 import FeaturesImage from '@/assets/images/features.svg';
 import { CgProfile } from 'react-icons/cg';
 import Button from '@/components/button';
+import FeaturesIcon from '@/assets/icons/features.svg';
 
 const Features = () => {
   return (
@@ -25,11 +26,17 @@ const Features = () => {
                   key={item.id}
                 >
                   <div className='flex items-center justify-center'>
-                    <CgProfile className='w-8 h-8 text-asparagus-500 col-span-1 ' />
+                    <Image
+                      src={FeaturesIcon}
+                      alt='Features Icon'
+                      width={30}
+                      height={30}
+                      className='w-14 h-14'
+                    />
                   </div>
                   <div className='flex flex-col items-start justify-center col-span-4'>
                     <h3 className='text-lg font-bold'>{item.title}</h3>
-                    <p className='text-firefly-800 dark:text-firefly-100'>
+                    <p className='text-firefly-800 dark:text-firefly-100 text-base'>
                       {item.description}
                     </p>
                   </div>

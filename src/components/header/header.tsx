@@ -28,7 +28,7 @@ const Header = () => {
         className={`absolute w-full transition-all duration-300 ${
           isScrolled
             ? 'bg-firefly-950 dark:bg-firefly-950 shadow-lg bg-opacity-95 dark:bg-opacity-95'
-            : 'bg-firefly-950 dark:bg-firefly-950 shadow-lg hover:shadow-firefly-600 transition-all bg-opacity-95 dark:bg-opacity-95 duration-300 dark:hover:shadow-firefly-700'
+            : 'bg-firefly-950 dark:bg-firefly-950 shadow-lg hover:shadow-firefly-950 dark:hover:shadow-firefly-800 transition-all bg-opacity-95 dark:bg-opacity-95 duration-300'
         }`}
         style={{ transitionDelay: isScrolled ? '0s' : '0.3s' }}
       >
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
           <div className='font-lexend font-light space-x-6 text-white text-sm md:text-base hidden md:block'>
             <Link href={'/'}>Home</Link>
-            <Link href={'/about'}>About</Link>
+            <Link href={'/wr-score'}>WR Score</Link>
             <Link href={'/blogs/page/1'}>Pricing</Link>
             <Link href={'/blogs/page/1'}>Love for WR</Link>
             <Link href={'/blogs/page/1'}>Blog</Link>

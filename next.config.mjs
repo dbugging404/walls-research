@@ -9,6 +9,7 @@ const nextConfig = {
       'cdn.sanity.io',
       'res.cloudinary.com',
       'images.unsplash.com',
+      'placehold.co',
     ],
   },
 };
