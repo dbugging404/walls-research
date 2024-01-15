@@ -7,7 +7,8 @@ import Reviews from '@/sections/home/reviews';
 import { NextPage } from 'next';
 import React from 'react';
 import Animate from '@/components/animate';
-import TwitterFeed from '@/sections/home/TwitterFeed';
+// import TwitterFeed from '@/sections/home/TwitterFeed';
+import BlogsSection from '@/sections/home/blogsSection';
 
 const IndexPage: NextPage = () => {
   return (
@@ -23,6 +24,9 @@ const IndexPage: NextPage = () => {
       </Animate>
       <Animate>
         <Reviews />
+      </Animate>
+      <Animate>
+        <BlogsSection />
       </Animate>
       <Animate>
         <Faq />

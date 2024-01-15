@@ -13,7 +13,7 @@ const IndexPage = () => {
     <div className='min-h-screen relative'>
       <div className='bg-white dark:bg-firefly-950 flex items-center justify-center overflow-hidden py-6 md:py-8 lg:pt-0'>
         <div className='max-w-7xl mx-auto h-full px-4 lg:px-8'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 py-6'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 py-14'>
             <div className='relative flex items-center lg:items-start justify-center flex-col'>
               <div className='absolute top-0 -left-48 z-0 opacity-50'>
                 <Image
@@ -46,7 +46,7 @@ const IndexPage = () => {
                   <Button
                     placeholder={''}
                     ripple
-                    className='border font-lexend border-firefly-500 hover:border-transparent rounded-md text-base font-bold text-firefly-100 hover:bg-asparagus-300 dark:hover:bg-asparagus-500 transition duration-300 ease-in-out hover:shadow-lg'
+                    className='font-lexend rounded-md text-base font-bold text-firefly-100 hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 transition duration-300 ease-in-out hover:shadow-lg'
                   >
                     <Link href={'#'} className=''>
                       <div className='flex items-center justify-center space-x-3'>
@@ -63,7 +63,7 @@ const IndexPage = () => {
                   <Button
                     placeholder={''}
                     ripple
-                    className='border font-lexend border-firefly-500 hover:border-transparent rounded-md text-base font-bold text-firefly-100 hover:bg-asparagus-300 dark:hover:bg-asparagus-500 transition duration-300 ease-in-out hover:shadow-lg'
+                    className='font-lexend rounded-md text-base font-bold text-firefly-100 hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 transition duration-300 ease-in-out hover:shadow-lg'
                   >
                     <Link href={'#'} className=''>
                       <div className='flex items-center justify-center space-x-3'>
@@ -137,14 +137,14 @@ const IndexPage = () => {
             ></path>
           </svg>
         </div>
-        <div className=' absolute top-10 left-3/4 z-0  opacity-10 '>
+        <div className='absolute top-10 left-3/4 z-0 opacity-10 '>
           <svg
             fill='#000000'
             width='800px'
             height='800px'
             viewBox='0 0 256 256'
             xmlns='http://www.w3.org/2000/svg'
-            className='w-96 z-0  h-full    object-fill fill-blue-300 text-blue-300'
+            className='w-72 z-0  h-full    object-fill fill-blue-300 text-blue-300'
           >
             <path
               d='M230.704 99.2a4.004 4.004 0 0 0-4.01-3.995h-50.981c-2.215 0-5.212-1.327-6.693-2.964L155.289 77.08c-17.795-19.65-41.628-16.256-53.234 7.58l-38.736 79.557C60.42 170.172 52.705 175 46.077 175H29.359a3.996 3.996 0 0 0-3.994 3.995v10.01A4 4 0 0 0 29.372 193h24.7c8.835 0 19.208-6.395 23.174-14.293l43.645-86.914c3.964-7.894 12.233-9.228 18.473-2.974l17.184 17.219c3.123 3.13 9.242 5.667 13.647 5.667H226.7a4.005 4.005 0 0 0 4.004-3.994v-8.512z'
