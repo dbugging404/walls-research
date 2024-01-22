@@ -80,20 +80,20 @@ const Header = () => {
                   >
                     WR Score
                   </Link>
-                  <Link
+                  {/* <Link
                     href={'/blogs/page/1'}
                     className='hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 px-3 py-1.5 rounded-3xl'
                     onClick={() => setIsOpen(false)}
                   >
                     Pricing
-                  </Link>
-                  <Link
+                  </Link> */}
+                  {/* <Link
                     href={'/blogs/page/1'}
                     className='hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 px-3 py-1.5 rounded-3xl'
                     onClick={() => setIsOpen(false)}
                   >
                     Love for WR
-                  </Link>
+                  </Link> */}
                   <Link
                     href={'/blogs/page/1'}
                     className='hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 px-3 py-1.5 rounded-3xl'
