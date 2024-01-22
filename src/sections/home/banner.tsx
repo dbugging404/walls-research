@@ -38,6 +38,11 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
     };
   }, [facts]);
 
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+    setProgress(0); // Reset progress when changing the fact
+  };
+
   return (
     <div className='py-4'>
       <div className=''>
@@ -57,6 +62,7 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
           </motion.div>
         </AnimatePresence>
       </div>
+
       <Progress
         value={progress}
         placeholder={''}
@@ -64,6 +70,19 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
         color='green'
         className='bg-firefly-950'
       />
+      <div className='flex items-center justify-center space-x-2 mt-4'>
+        {facts.map((_, index) => (
+          <span
+            key={index}
+            onClick={() => handleDotClick(index)}
+            className={`cursor-pointer h-2 w-2 rounded-full ${
+              index === currentIndex
+                ? 'bg-green-500 scale-150 dark:bg-green-300 transition-all duration-150 ease-in-out'
+                : 'bg-firefly-950 dark:bg-firefly-700'
+            }`}
+          ></span>
+        ))}
+      </div>
     </div>
   );
 };

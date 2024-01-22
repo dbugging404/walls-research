@@ -10,8 +10,8 @@ import { Button } from '@material-tailwind/react';
 
 const IndexPage = () => {
   return (
-    <div className='min-h-screen relative'>
-      <div className='bg-white dark:bg-firefly-950 flex items-center justify-center overflow-hidden py-6 md:py-8 lg:pt-0'>
+    <div className='min-h-screen relative bg-white dark:bg-firefly-950'>
+      <div className='flex items-center justify-center overflow-hidden py-6 md:py-8 lg:pt-0'>
         <div className='max-w-7xl mx-auto h-full px-4 lg:px-8'>
           <div className='grid grid-cols-1 lg:grid-cols-2 py-14'>
             <div className='relative flex items-center lg:items-start justify-center flex-col'>
@@ -100,7 +100,7 @@ const IndexPage = () => {
                   alt='download'
                   width={1920}
                   height={500}
-                  className='w-full h-full object-fill scale-125 pt-10 z-10'
+                  className='w-full h-full object-fill scale-125 pt-10 z-10 '
                 />
               </div>
             </div>

@@ -10,7 +10,10 @@ const config: Config = {
     './src/styles/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class', // or 'media' or 'class
-  plugins: [require('@headlessui/tailwindcss')],
+  plugins: [
+    require('@headlessui/tailwindcss'),
+    require('@tailwindcss/typography'),
+  ],
   theme: {
     extend: {
       backgroundImage: {

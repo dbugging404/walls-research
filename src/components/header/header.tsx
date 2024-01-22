@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <div className='sticky top-0 z-50 w-full'>
-      <div className='bg-firefly-900 dark:bg-firefly-950 border-b dark:border-firefly-800 border-firefly-200 bg-opacity-95 dark:bg-opacity-95'>
+      <div className='bg-firefly-950 border-b dark:border-firefly-800 border-firefly-200 bg-opacity-95 dark:bg-opacity-95'>
         <nav className='max-w-7xl mx-auto flex items-center justify-between px-3'>
           <div>
             <Link href='/' className='hidden md:block'>
@@ -24,10 +24,10 @@ const Header = () => {
           <div className='font-lexend font-light space-x-6 text-white text-sm md:text-base hidden lg:block'>
             <Link href={'/'}>Home</Link>
             <Link href={'/wr-score'}>WR Score</Link>
-            <Link href={'/blogs/page/1'}>Pricing</Link>
-            <Link href={'/blogs/page/1'}>Love for WR</Link>
+            {/* <Link href={'/blogs/page/1'}>Pricing</Link> */}
+            {/* <Link href={'/blogs/page/1'}>Love for WR</Link> */}
             <Link href={'/blogs/page/1'}>Blog</Link>
-            <Link href={'/blogs/page/1'}>Career</Link>
+            <Link href={'/career'}>Career</Link>
             <Link href={'/blogs/page/1'}>Contact</Link>
           </div>
           <div className='flex items-center justify-center space-x-3'>
@@ -40,7 +40,7 @@ const Header = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               type='button'
-              className='inline-flex mr-1 lg:hidden items-center justify-center p-2 text-firefly-100 rounded-lg hover:text-white hover:bg-firefly-400 focus:outline-none'
+              className='inline-flex mr-1 lg:hidden items-center justify-center p-2 text-firefly-100 rounded-lg hover:text-white hover:bg-firefly-900 focus:outline-none'
               aria-controls='mobile-menu'
               aria-expanded='false'
             >

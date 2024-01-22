@@ -19,10 +19,10 @@ const Features = () => {
               a seamless experience—track dividends, compare companies, and stay
               ahead of market movements
             </div>
-            <div className='grid md:grid-cols-2 gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 md:gap-3'>
               {data.map((item) => (
                 <div
-                  className='grid grid-cols-5 space-x-3 mt-10 text-firefly-900 dark:text-firefly-100 font-lexend hover:bg-firefly-200 dark:hover:bg-firefly-900 p-2 rounded-md cursor-pointer transition duration-300 ease-in-out'
+                  className='grid grid-cols-5 space-x-3 mt-8 text-firefly-900 dark:text-firefly-100 font-lexend hover:bg-firefly-200 dark:hover:bg-firefly-900 py-3 rounded-md cursor-pointer transition duration-300 ease-in-out'
                   key={item.id}
                 >
                   <div className='flex items-center justify-center'>
