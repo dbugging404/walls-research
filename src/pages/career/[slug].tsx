@@ -71,7 +71,7 @@ const CareerPage = ({ career }) => {
     <div>
       {career && (
         <div className='container min-h-screen mx-auto mt-5 py-16 px-3'>
-          <div className='flex flex-col items-center justify-center font-lexend space-y-2'>
+          <div className='flex flex-col items-center justify-center font-lexend space-y-2 text-firefly-800 dark:text-firefly-200'>
             <Image
               src={WallsResearchLogo}
               alt='Walls Research Logo'
@@ -82,7 +82,9 @@ const CareerPage = ({ career }) => {
             <p className=''>{career.qualification}</p>
             <p className=''>{career.experience}</p>
             <p className='max-w-3xl pb-3'>{career.description}</p>
-            <p className='max-w-3xl prose'>{career.jobDescription}</p>
+            <p className='max-w-3xl prose text-firefly-800 dark:text-firefly-200'>
+              {career.jobDescription}
+            </p>
 
             <div className='pt-6 flex flex-col mx-auto'>
               <Link
