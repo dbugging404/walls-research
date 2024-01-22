@@ -30,81 +30,82 @@ const IndexPage = ({ blogs }) => {
           </div>
         </div>
         <div className='py-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none p-3'>
-          {blogs.map((post) => (
-            <Link
-              href={`/blogs/${post.node.slug}`}
-              key={post.node.title}
-              className='border border-firefly-200 dark:border-firefly-700 p-4 rounded-md shadow-md hover:shadow-xl dark:shadow-firefly-900/20 dark:hover:dark:shadow-firefly-900/20 transition duration-300 ease-in-out flex items-start justify-between flex-col'
-            >
-              <div>
-                <span
-                  className={classNames(
-                    post.node.category === 'INVESTING'
-                      ? 'bg-blue-100 text-blue-800 px-3 rounded-3xl'
-                      : '',
-                    post.node.category === 'ANNOUNCEMENT'
-                      ? 'bg-red-100 text-red-800 px-3 rounded-3xl'
-                      : '',
-                    post.node.category === 'GUIDE'
-                      ? 'bg-asparagus-200 text-asparagus-700 px-3 rounded-3xl'
-                      : '',
-                    post.node.category === 'ANALYSIS'
-                      ? 'bg-amber-100 text-amber-800 px-3 rounded-3xl'
-                      : '',
-                    post.node.category === 'ARTICLE'
-                      ? 'bg-teal-100 text-teal-800 px-3 rounded-3xl'
-                      : '',
-                    post.node.category === 'NEWS'
-                      ? 'bg-cyan-100 text-cyan-800 px-3 rounded-3xl'
-                      : ''
-                  )}
-                >
-                  {post.node.category}
-                </span>
-                <div className='block mt-4'>
-                  <p className='text-xl font-semibold text-firefly-800 dark:text-firefly-200'>
-                    {post.node.title}
-                  </p>
-                  <p className='mt-3 text-sm text-firefly-400'>
-                    {post.node.excerpt}
-                  </p>
-                </div>
-              </div>
-              <div className='mt-6'>
-                <div className='flex-shrink-0'>
-                  <span className='sr-only'>
-                    {post.node.authors.map((author) => author.name + ', ')}
+          {blogs &&
+            blogs.map((post) => (
+              <Link
+                href={`/blogs/${post.node.slug}`}
+                key={post.node.title}
+                className='border border-firefly-200 dark:border-firefly-700 p-4 rounded-md shadow-md hover:shadow-xl dark:shadow-firefly-900/20 dark:hover:dark:shadow-firefly-900/20 transition duration-300 ease-in-out flex items-start justify-between flex-col'
+              >
+                <div>
+                  <span
+                    className={classNames(
+                      post.node.category === 'INVESTING'
+                        ? 'bg-blue-100 text-blue-800 px-3 rounded-3xl'
+                        : '',
+                      post.node.category === 'ANNOUNCEMENT'
+                        ? 'bg-red-100 text-red-800 px-3 rounded-3xl'
+                        : '',
+                      post.node.category === 'GUIDE'
+                        ? 'bg-asparagus-200 text-asparagus-700 px-3 rounded-3xl'
+                        : '',
+                      post.node.category === 'ANALYSIS'
+                        ? 'bg-amber-100 text-amber-800 px-3 rounded-3xl'
+                        : '',
+                      post.node.category === 'ARTICLE'
+                        ? 'bg-teal-100 text-teal-800 px-3 rounded-3xl'
+                        : '',
+                      post.node.category === 'NEWS'
+                        ? 'bg-cyan-100 text-cyan-800 px-3 rounded-3xl'
+                        : ''
+                    )}
+                  >
+                    {post.node.category}
                   </span>
-                </div>
-                <div className='flex items-center justify-start space-x-3'>
-                  <Image
-                    src={WRLogo}
-                    className='w-12 h-12 bg-firefly-950 rounded-md p-0.5'
-                    alt={'Walls Research Team'}
-                  />
-                  <div className='flex flex-col space-x-1 text-sm '>
-                    <p className='ml-1 text-sm font-medium'>
-                      {post.node.authors.map((author) => author.name + ', ')}
+                  <div className='block mt-4'>
+                    <p className='text-xl font-semibold text-firefly-800 dark:text-firefly-200'>
+                      {post.node.title}
                     </p>
-                    <div className='space-x-2'>
-                      <time dateTime={post.node.published}>
-                        {new Date(post.node.published).toLocaleDateString(
-                          'en-GB',
-                          {
-                            day: '2-digit',
-                            month: 'short',
-                            year: 'numeric',
-                          }
-                        )}
-                      </time>
-                      <span aria-hidden='true'>&middot;</span>
-                      <span>{post.node.readTime}</span>
+                    <p className='mt-3 text-sm text-firefly-400'>
+                      {post.node.excerpt}
+                    </p>
+                  </div>
+                </div>
+                <div className='mt-6'>
+                  <div className='flex-shrink-0'>
+                    <span className='sr-only'>
+                      {post.node.authors.map((author) => author.name + ', ')}
+                    </span>
+                  </div>
+                  <div className='flex items-center justify-start space-x-3'>
+                    <Image
+                      src={WRLogo}
+                      className='w-12 h-12 bg-firefly-950 rounded-md p-0.5'
+                      alt={'Walls Research Team'}
+                    />
+                    <div className='flex flex-col space-x-1 text-sm '>
+                      <p className='ml-1 text-sm font-medium'>
+                        {post.node.authors.map((author) => author.name + ', ')}
+                      </p>
+                      <div className='space-x-2'>
+                        <time dateTime={post.node.published}>
+                          {new Date(post.node.published).toLocaleDateString(
+                            'en-GB',
+                            {
+                              day: '2-digit',
+                              month: 'short',
+                              year: 'numeric',
+                            }
+                          )}
+                        </time>
+                        <span aria-hidden='true'>&middot;</span>
+                        <span>{post.node.readTime}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
         </div>
       </div>
     </>
