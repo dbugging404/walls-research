@@ -80,7 +80,7 @@ const IndexPage = ({ blogs }) => {
                   <div className='flex items-center justify-start space-x-3'>
                     <Image
                       src={WRLogo}
-                      className='w-12 h-12 bg-firefly-950 rounded-md p-0.5'
+                      className='w-12 h-12 bg-gradient-to-b from-asparagus-500 to-asparagus-700 dark:bg-firefly-950 rounded-md p-0.5'
                       alt={'Walls Research Team'}
                     />
                     <div className='flex flex-col space-x-1 text-sm '>

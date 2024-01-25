@@ -14,15 +14,15 @@ import { RiTwitterXFill } from 'react-icons/ri';
 const LINKS = [
   {
     title: 'Product',
-    items: ['Overview', 'Features', 'Solutions', 'Tutorials'],
+    items: ['Overview', 'Features', 'Tutorials'],
   },
   {
     title: 'Company',
-    items: ['About us', 'Careers', 'Press', 'News'],
+    items: ['About us', 'Careers'],
   },
   {
     title: 'Resource',
-    items: ['Blog', 'Newsletter', 'Events', 'Help center'],
+    items: ['Blog'],
   },
   {
     title: 'Legal',
@@ -45,14 +45,14 @@ const Footer = () => {
                 className='p-2 fill-white grayscale brightness-0 invert flex items-center justify-center'
               />
             </div>
-            <div className='hidden md:block'>
+            {/* <div className='hidden md:block'>
               <Download />
-            </div>
+            </div> */}
           </div>
-          <div className='md:hidden flex items-center justify-center mx-auto pb-6 md:pb-6'>
+          {/* <div className='md:hidden flex items-center justify-center mx-auto pb-6 md:pb-6'>
             <Download />
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-4 justify-between items-center text-center md:text-left gap-4'>
+          </div> */}
+          <div className='grid grid-cols-2 md:grid-cols-4 justify-between items-start text-center md:text-left gap-4'>
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography

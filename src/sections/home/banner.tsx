@@ -46,7 +46,7 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
   return (
     <div className='py-4'>
       <div className=''>
-        <h2 className='text-3xl font-bold mb-4'>Did you know?</h2>
+        <h2 className='text-3xl font-bold'>Did you know?</h2>
         <AnimatePresence mode='wait'>
           <motion.div
             key={currentIndex}
@@ -68,9 +68,9 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
         placeholder={''}
         size='sm'
         color='green'
-        className='bg-firefly-950'
+        className='bg-firefly-900'
       />
-      <div className='flex items-center justify-center space-x-2 mt-4'>
+      <div className='flex items-center justify-end space-x-2 mt-4'>
         {facts.map((_, index) => (
           <span
             key={index}

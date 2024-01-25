@@ -5,20 +5,21 @@ import { HiChevronRight } from 'react-icons/hi';
 import FeaturesIcon from '@/assets/icons/features.svg';
 import PricingIcon from '@/assets/icons/Pricing.svg';
 import TeamIcon from '@/assets/icons/team.svg';
+import Link from 'next/link';
 
 const Content = () => {
   return (
     <div className='bg-firefly-100 dark:bg-firefly-950  text-firefly-800 dark:text-firefly-100'>
       <div className='mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
-          <div className='w-full flex items-center justify-center bg-firefly-900'>
+          <div className='w-full flex items-center justify-center bg-gradient-to-b from-asparagus-500 to-asparagus-700 bg-asparagus-600 dark:from-firefly-950 dark:to-firefly-900'>
             <Image
               src={screenshot}
               alt='Banner Image'
               className='w-screen rounded-lg max-w-lg mx-auto lg:mx-0 p-6 md:p-0'
             />
           </div>
-          <div className='flex flex-col mx-auto lg:mx-0 justify-center py-6 md:py-8 lg:py-10 px-6 border-t border-b dark:border-firefly-900 inset-0'>
+          <div className='flex flex-col mx-auto lg:mx-0 justify-center py-6 md:py-8 lg:py-10 px-6 border-b dark:border-firefly-900 inset-0'>
             <div className='max-w-xl text-center lg:text-justify text-firefly-800 dark:text-firefly-100'>
               <h3 className='text-5xl sm:text-3xl font-lexend pb-6'>
                 Expert Analysis at your Fingertips...
@@ -30,26 +31,27 @@ const Content = () => {
               </div>
               <div className='space-y-2 mt-8'>
                 {data.map((item) => (
-                  <div
+                  <Link
                     key={item.id}
-                    className='flex items-center justify-between w-full mx-auto md:mx-0 max-w-sm p-2 border-2 border-firefly-300 dark:border-firefly-600 rounded-md dark:hover:bg-firefly-600 hover:bg-firefly-400  hover:bg-opacity-40 hover:border-transparent transition-all duration-150'
+                    href={item.link}
+                    className='flex items-center justify-between w-full mx-auto md:mx-0 max-w-sm p-2 border border-asparagus-500 dark:border-firefly-600 rounded-md dark:hover:bg-firefly-900 hover:bg-firefly-300 hover:bg-opacity-40 hover:border-transparent transition-all duration-150 ease-in-out'
                   >
                     <div className='flex space-x-3 items-center'>
-                      <div>
+                      <div className=''>
                         <Image
                           src={item.icon}
                           alt='Features Icon'
                           width={30}
                           height={30}
-                          className='w-14 h-14'
+                          className='w-14 h-14 '
                         />
                       </div>
                       <div className='text-base font-lexend'>{item.title}</div>
                     </div>
                     <div>
-                      <HiChevronRight className='w-8 h-8' />
+                      <HiChevronRight className='w-8 h-8 text-asparagus-500' />
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -67,15 +69,18 @@ const data = [
     id: 1,
     title: 'WR Score',
     icon: FeaturesIcon,
+    link: '/wr-score',
   },
   {
     id: 2,
     title: 'Our Team',
     icon: TeamIcon,
+    link: '/team',
   },
   {
     id: 3,
     title: 'Pricing',
     icon: PricingIcon,
+    link: '/pricing',
   },
 ];

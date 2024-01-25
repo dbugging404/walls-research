@@ -28,7 +28,7 @@ const Header = () => {
             {/* <Link href={'/blogs/page/1'}>Love for WR</Link> */}
             <Link href={'/blogs/page/1'}>Blog</Link>
             <Link href={'/career'}>Career</Link>
-            <Link href={'/blogs/page/1'}>Contact</Link>
+            <Link href={'/contact'}>Contact</Link>
           </div>
           <div className='flex items-center justify-center space-x-3'>
             <Link href={'/download'}>
@@ -102,14 +102,14 @@ const Header = () => {
                     Blog
                   </Link>
                   <Link
-                    href={'/blogs/page/1'}
+                    href={'/career'}
                     className='hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 px-3 py-1.5 rounded-3xl'
                     onClick={() => setIsOpen(false)}
                   >
                     Career
                   </Link>
                   <Link
-                    href={'/blogs/page/1'}
+                    href={'/contact'}
                     className='hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 px-3 py-1.5 rounded-3xl'
                     onClick={() => setIsOpen(false)}
                   >

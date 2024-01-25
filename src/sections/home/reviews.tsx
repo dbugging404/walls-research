@@ -1,6 +1,5 @@
 import { Carousel, IconButton } from '@material-tailwind/react';
 import Link from 'next/link';
-import { CgProfile } from 'react-icons/cg';
 import { FaXTwitter } from 'react-icons/fa6';
 import WallsResearchLogo from '@/assets/logos/walls-research.svg';
 import Image from 'next/image';

@@ -1,12 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import downloadImage from '@/assets/images/download.svg';
 import Arrow from '@/assets/icons/arrow.svg';
-import GooglePlayIcon from '@/assets/logos/google-play-icon.svg';
-import AppleAppStoreIcon from '@/assets/logos/apple-app-store.svg';
-import qrCode from '@/assets/images/dwl_qr_code.svg';
-import { Button } from '@material-tailwind/react';
+import Link from 'next/link';
+import Button from '@/components/button';
 
 const IndexPage = () => {
   return (
@@ -14,7 +11,7 @@ const IndexPage = () => {
       <div className='flex items-center justify-center overflow-hidden py-6 md:py-8 lg:pt-0'>
         <div className='max-w-7xl mx-auto h-full px-4 lg:px-8'>
           <div className='grid grid-cols-1 lg:grid-cols-2 py-14'>
-            <div className='relative flex items-center lg:items-start justify-center flex-col'>
+            <div className='relative flex items-center lg:items-start justify-center flex-col z-10'>
               <div className='absolute top-0 -left-48 z-0 opacity-50'>
                 <Image
                   src={Arrow}
@@ -36,50 +33,87 @@ const IndexPage = () => {
                 our user-friendly platform designed to supercharge your
                 financial success.
               </div>
-              <div className='flex flex-col max-w-lg items-center justify-center p-6 w-full dark:bg-firefly-900 bg-firefly-200 rounded-lg z-10'>
-                <div className='pb-3 font-lexend font-sm'>
-                  (Scan the QR code to download the App)
-                </div>
-                <Image src={qrCode} alt='QR Code' />
-                <div className='pt-3 font-lexend'>Available on</div>
-                <div className='mt-3 flex flex-col items-center md:flex-row md:space-x-3 space-y-3 md:space-y-0'>
-                  <Button
-                    placeholder={''}
-                    ripple
-                    className='font-lexend rounded-md text-base font-bold text-firefly-100 hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 transition duration-300 ease-in-out hover:shadow-lg'
-                  >
-                    <Link href={'#'} className=''>
-                      <div className='flex items-center justify-center space-x-3'>
-                        <Image
-                          src={GooglePlayIcon}
-                          alt='Google Play Icon'
-                          className='w-8 h-8'
-                        />
-                        <span>Download</span>
-                      </div>
+              <div className='py-4 mx-auto'>
+                <Button>
+                  <Link href={'mailto:admin@wallsresearch.in'}>
+                    Join our BETA Program
+                  </Link>
+                </Button>
+              </div>
+              <div className='font-lexend dark:text-firefly-100 text-firefly-800'>
+                <h3 className='text-xl py-3'>
+                  🚀 Be a Pioneer in Financial Research! Join the WR App Beta
+                  Program! 🚀
+                </h3>
+                <p className='pb-3 font-light'>
+                  📱 Exciting News: The WR App is now available on the Play
+                  Store, but here&apos;s the catch – access is currently by
+                  invitation only! We&apos;re inviting you to be among the first
+                  to experience the power of our cutting-edge stock research
+                  platform.
+                </p>
+                <div className='space-y-3'>
+                  <div className='text-lg font-medium'>
+                    🌐 What is Walls Research App ?
+                  </div>
+                  <div className='font-light'>
+                    The WR App is poised to revolutionize the financial research
+                    industry, and we want you to be a part of this
+                    groundbreaking journey. Your insights will play a pivotal
+                    role in shaping the future of stock analysis.
+                  </div>
+                  <div className='text-lg font-medium'>🔍 Why Beta ?</div>
+                  <div className='font-light'>
+                    As we fine-tune and enhance our platform, we&apos;re seeking
+                    feedback from enthusiasts like you to ensure an exceptional
+                    user experience. Your input is invaluable in helping us
+                    deliver a product that meets the highest standards.
+                  </div>
+                  <div className='text-lg font-medium'>
+                    🤝 How to Join the Beta Program:
+                  </div>
+                  <div className='font-light'>
+                    To gain exclusive access to the WR App and become a beta
+                    tester, simply connect with us via email at{' '}
+                    <Link
+                      href={
+                        'mailto:admin@wallsresearch.in?subject=Join Beta Program'
+                      }
+                      className='text-asparagus-500 font-medium hover:text-asparagus-400 transition duration-300 ease-in-out'
+                    >
+                      admin@wallsresearch.in
                     </Link>
-                  </Button>
-
-                  <Button
-                    placeholder={''}
-                    ripple
-                    className='font-lexend rounded-md text-base font-bold text-firefly-100 hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 transition duration-300 ease-in-out hover:shadow-lg'
-                  >
-                    <Link href={'#'} className=''>
-                      <div className='flex items-center justify-center space-x-3'>
-                        <Image
-                          src={AppleAppStoreIcon}
-                          alt='Google Play Icon'
-                          className='w-8 h-8'
-                        />
-                        <span>Download</span>
-                      </div>
-                    </Link>
-                  </Button>
+                    . By participating in our beta program, you&apos;ll enjoy
+                    early access to features, contribute to refining the
+                    platform, and have a direct impact on the future of
+                    financial research.
+                  </div>
+                  <div className='text-lg font-medium'>
+                    🎉 What&apos;s In It for You?
+                  </div>
+                  <div className='font-light'>
+                    <ul className='list-outside list-disc space-y-1.5 ml-4'>
+                      <li>Early access to the WR App features.</li>
+                      <li>Influence the development of the platform.</li>
+                      <li>Shape the future of financial research.</li>
+                    </ul>
+                  </div>
+                  <div className='text-lg font-medium'>📧 Contact Us:</div>
+                  <div className='font-light'>
+                    Ready to dive into the future of financial research? Connect
+                    with us at{' '}
+                    <Link
+                      href={'mailto:admin@wallsresearch.in'}
+                      className='text-asparagus-500 font-medium hover:text-asparagus-400 transition duration-300 ease-in-out'
+                    >
+                      admin@wallsresearch.in
+                    </Link>{' '}
+                    and secure your spot in the beta program!
+                  </div>
                 </div>
               </div>
             </div>
-            <div className='hidden lg:flex items-center justify-center w-screen max-w-4xl relative'>
+            <div className='hidden lg:flex items-start justify-center w-screen max-w-4xl relative'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='my-6 mx-auto h-10 w-10 animate-bounce rounded-full bg-white p-2 lg:hidden'
@@ -100,7 +134,7 @@ const IndexPage = () => {
                   alt='download'
                   width={1920}
                   height={500}
-                  className='w-full h-full object-fill scale-125 pt-10 z-10 '
+                  className='w-full h-full object-fill scale-150 z-10 '
                 />
               </div>
             </div>

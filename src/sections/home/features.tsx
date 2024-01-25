@@ -4,6 +4,7 @@ import FeaturesImage from '@/assets/images/features.svg';
 import { CgProfile } from 'react-icons/cg';
 import Button from '@/components/button';
 import FeaturesIcon from '@/assets/icons/features.svg';
+import Link from 'next/link';
 
 const Features = () => {
   return (
@@ -22,10 +23,10 @@ const Features = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 md:gap-3'>
               {data.map((item) => (
                 <div
-                  className='grid grid-cols-5 space-x-3 mt-8 text-firefly-900 dark:text-firefly-100 font-lexend hover:bg-firefly-200 dark:hover:bg-firefly-900 py-3 rounded-md cursor-pointer transition duration-300 ease-in-out'
+                  className='grid grid-cols-5 space-x-3 mt-8 text-firefly-900 dark:text-firefly-100 font-lexend hover:bg-asparagus-200 dark:hover:bg-firefly-900 py-3 rounded-md cursor-pointer transition duration-300 ease-in-out p-2'
                   key={item.id}
                 >
-                  <div className='flex items-center justify-center'>
+                  <div className='flex items-start mt-1 justify-center'>
                     <Image
                       src={FeaturesIcon}
                       alt='Features Icon'
@@ -35,8 +36,10 @@ const Features = () => {
                     />
                   </div>
                   <div className='flex flex-col items-start justify-center col-span-4'>
-                    <h3 className='text-lg font-bold'>{item.title}</h3>
-                    <p className='text-firefly-800 dark:text-firefly-100 text-base'>
+                    <h3 className='text-base leading-7 font-bold'>
+                      {item.title}
+                    </h3>
+                    <p className='text-firefly-800 dark:text-firefly-100 text-sm mt-0.5'>
                       {item.description}
                     </p>
                   </div>
@@ -44,22 +47,25 @@ const Features = () => {
               ))}
             </div>
             <div className='mt-8 md:mt-14'>
-              <Button additionalClasses='' placeholder={'Learn More'} size='md'>
-                Learn More
-              </Button>
+              <Link href={'/wr-score'}>
+                <Button
+                  additionalClasses=''
+                  placeholder={'Learn More'}
+                  size='md'
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
 
-          <figure className='flex flex-col items-center justify-center mx-auto'>
+          <div className='flex flex-col items-center justify-center mx-auto'>
             <Image
               src={FeaturesImage}
               alt='Features Image'
               className='rounded-lg md:max-w-sm h-80 md:h-auto object-cover object-top'
             />
-            <figcaption className='text-center text-xs font-lexend pt-4 text-firefly-800 dark:text-firefly-100'>
-              Walls Research App
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </div>
     </div>

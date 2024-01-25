@@ -1,10 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
+import WRLogo from '@/assets/logos/walls-research.svg';
 
-const BlogsSection = () => {
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ');
+}
+
+const BlogsSection = ({ blogs }) => {
   return (
-    <div className='py-6 ,d:py-8 lg:py-10 border-t border-firefly-200 dark:border-firefly-700'>
+    <div className='py-6 ,d:py-8 lg:py-10 border-t border-firefly-200 dark:border-firefly-700 font-lexend'>
       <div className='max-w-7xl mx-auto px-3'>
         <h2 className='text-center font-lexend text-4xl font-bold pb-5 text-firefly-800 dark:text-firefly-100'>
           Recent Blogs
@@ -12,29 +17,83 @@ const BlogsSection = () => {
         <p className='text-center pb-5 font-lexend'>
           Our most recent blogs selection.
         </p>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-5'>
-          {data.map((items) => (
-            <Link key={items.id} href={items.link}>
-              <div>
-                <div className='relative rounded-md overflow-hidden group'>
-                  <div className='absolute w-full h-full bg-firefly-700 dark:bg-firefly-700 dark:bg-opacity-75 bg-opacity-75'>
-                    <h4 className='flex items-center justify-center h-full font-lexend text-firefly-100'>
-                      <div className='group-hover:bg-gradient-to-b from-asparagus-500 to-asparagus-700 px-3 py-1.5 rounded-full transition-all duration-150 ease-in-out'>
-                        {items.title}
-                      </div>
-                    </h4>
+        <div className='py-12 max-w-xl mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none p-3'>
+          {blogs &&
+            blogs.map((post) => (
+              <Link
+                href={`/blogs/${post.slug}`}
+                key={post.title}
+                className='border border-firefly-200 dark:border-firefly-700 p-4 rounded-md shadow-md hover:shadow-xl dark:shadow-firefly-900/20 dark:hover:dark:shadow-firefly-900/20 transition duration-300 ease-in-out flex items-start justify-between flex-col'
+              >
+                <div>
+                  <span
+                    className={classNames(
+                      post.category === 'INVESTING'
+                        ? 'bg-blue-100 text-blue-800 px-3 rounded-3xl'
+                        : '',
+                      post.category === 'ANNOUNCEMENT'
+                        ? 'bg-red-100 text-red-800 px-3 rounded-3xl'
+                        : '',
+                      post.category === 'GUIDE'
+                        ? 'bg-asparagus-200 text-asparagus-700 px-3 rounded-3xl'
+                        : '',
+                      post.category === 'ANALYSIS'
+                        ? 'bg-amber-100 text-amber-800 px-3 rounded-3xl'
+                        : '',
+                      post.category === 'ARTICLE'
+                        ? 'bg-teal-100 text-teal-800 px-3 rounded-3xl'
+                        : '',
+                      post.category === 'NEWS'
+                        ? 'bg-cyan-100 text-cyan-800 px-3 rounded-3xl'
+                        : ''
+                    )}
+                  >
+                    {post.category}
+                  </span>
+                  <div className='block mt-4'>
+                    <p className='text-xl font-semibold text-firefly-800 dark:text-firefly-200'>
+                      {post.title}
+                    </p>
+                    <p className='mt-3 text-sm text-firefly-400'>
+                      {post.excerpt}
+                    </p>
                   </div>
-                  <Image
-                    src={items.image}
-                    alt='blogs'
-                    height={200}
-                    width={400}
-                    className='w-full h-full'
-                  />
                 </div>
-              </div>
-            </Link>
-          ))}
+                <div className='mt-6'>
+                  <div className='flex-shrink-0'>
+                    <span className='sr-only'>
+                      {post.authors.map((author) => author.name + ', ')}
+                    </span>
+                  </div>
+                  <div className='flex items-center justify-start space-x-3'>
+                    <Image
+                      src={WRLogo}
+                      className='w-12 h-12 bg-asparagus-500 dark:bg-firefly-950 rounded-md p-0.5'
+                      alt={'Walls Research Team'}
+                    />
+                    <div className='flex flex-col space-x-1 text-sm '>
+                      <p className='ml-1 text-sm font-medium'>
+                        {post.authors.map((author) => author.name + ', ')}
+                      </p>
+                      <div className='space-x-2'>
+                        <time dateTime={post.published}>
+                          {new Date(post.published).toLocaleDateString(
+                            'en-GB',
+                            {
+                              day: '2-digit',
+                              month: 'short',
+                              year: 'numeric',
+                            }
+                          )}
+                        </time>
+                        <span aria-hidden='true'>&middot;</span>
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
         </div>
       </div>
     </div>
@@ -42,24 +101,3 @@ const BlogsSection = () => {
 };
 
 export default BlogsSection;
-
-const data = [
-  {
-    id: 1,
-    title: 'What is WR Score?',
-    image: 'https://source.unsplash.com/random/400x250',
-    link: '/blogs/what-is-wr-score',
-  },
-  {
-    id: 2,
-    title: 'Is Walls Research Free?',
-    image: 'https://source.unsplash.com/random/400x250',
-    link: '/blogs/is-walls-research-free',
-  },
-  {
-    id: 3,
-    title: 'How to use WR Score?',
-    image: 'https://source.unsplash.com/random/400x250',
-    link: '/blogs/how-to-use-wr-score',
-  },
-];
