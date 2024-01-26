@@ -2,17 +2,15 @@ import Image from 'next/image';
 import React from 'react';
 import screenshot from '@/assets/images/content.svg';
 import { HiChevronRight } from 'react-icons/hi';
-import FeaturesIcon from '@/assets/icons/features.svg';
-import PricingIcon from '@/assets/icons/Pricing.svg';
-import TeamIcon from '@/assets/icons/team.svg';
 import Link from 'next/link';
+import { MdNewspaper, MdCreditScore, MdContactSupport } from 'react-icons/md';
 
 const Content = () => {
   return (
     <div className='bg-firefly-100 dark:bg-firefly-950  text-firefly-800 dark:text-firefly-100'>
       <div className='mx-auto'>
         <div className='grid grid-cols-1 lg:grid-cols-2'>
-          <div className='w-full flex items-center justify-center bg-gradient-to-b from-asparagus-500 to-asparagus-700 bg-asparagus-600 dark:from-firefly-950 dark:to-firefly-900'>
+          <div className='w-full flex items-center justify-center bg-gradient-to-b from-asparagus-600 to-asparagus-800 bg-asparagus-600 dark:from-firefly-950 dark:to-gray-900'>
             <Image
               src={screenshot}
               alt='Banner Image'
@@ -37,14 +35,8 @@ const Content = () => {
                     className='flex items-center justify-between w-full mx-auto md:mx-0 max-w-sm p-2 border border-asparagus-500 dark:border-firefly-600 rounded-md dark:hover:bg-firefly-900 hover:bg-firefly-300 hover:bg-opacity-40 hover:border-transparent transition-all duration-150 ease-in-out'
                   >
                     <div className='flex space-x-3 items-center'>
-                      <div className=''>
-                        <Image
-                          src={item.icon}
-                          alt='Features Icon'
-                          width={30}
-                          height={30}
-                          className='w-14 h-14 '
-                        />
+                      <div className='py-1.5 text-asparagus-500'>
+                        {item.icon}
                       </div>
                       <div className='text-base font-lexend'>{item.title}</div>
                     </div>
@@ -68,19 +60,19 @@ const data = [
   {
     id: 1,
     title: 'WR Score',
-    icon: FeaturesIcon,
+    icon: <MdCreditScore className='text-3xl' />,
     link: '/wr-score',
   },
   {
     id: 2,
-    title: 'Our Team',
-    icon: TeamIcon,
-    link: '/team',
+    title: 'Blogs',
+    icon: <MdNewspaper className='text-3xl' />,
+    link: '/blogs/page/1',
   },
   {
     id: 3,
-    title: 'Pricing',
-    icon: PricingIcon,
-    link: '/pricing',
+    title: 'Contact Us',
+    icon: <MdContactSupport className='text-3xl' />,
+    link: '/contact',
   },
 ];

@@ -36,8 +36,8 @@ const IndexPage = ({ careers }: careersProps) => {
         {/* Open Graph / Facebook */}
 
         <meta property='og:title' content='Career | Walls Research' />
-        <meta property='og:site_name' content='GarbhaGudi IVF Centre' />
-        <meta property='og:url' content='https://garbhagudi.com' />
+        <meta property='og:site_name' content='Walls Research' />
+        <meta property='og:url' content='https://wallsresearch.com' />
         <meta
           property='og:description'
           content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'

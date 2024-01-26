@@ -116,13 +116,11 @@ const Banner = () => {
         <div className='grid grid-cols-1 xl:grid-cols-2'>
           <div className='px-3 flex items-start justify-center flex-col max-w-4xl mx-auto'>
             <div className='text-3xl lg:text-4xl font-lexend text-firefly-700 dark:text-firefly-100 pt-8 pb-4'>
-              <h1 className=''>
-                Discover a New Era of Stock Investing with Walls Research -
-              </h1>
-              <p className='text-lg mt-4 font-medium'>
+              <h1 className=''>Discover a New Era of Stock Investment !</h1>
+              {/* <p className='text-lg mt-4 font-medium'>
                 Where Extensive Knowledge Meets Intelligent Algorithmic Insights
                 for Unmatched Wealth Growth.
-              </p>
+              </p> */}
             </div>
             <div className='text-base text-firefly-800 dark:text-firefly-100'>
               <div className='font-lexend font-light space-y-2'>

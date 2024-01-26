@@ -16,7 +16,38 @@ const IndexPage = ({ blogs }) => {
   return (
     <>
       <Head>
+        {/* Primary Tags */}
+
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
         <title>Blogs | Walls Research</title>
+        <meta name='title' content='Blogs | Walls Research' />
+        <meta
+          name='description'
+          content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta property='og:title' content='Blogs | Walls Research' />
+        <meta property='og:site_name' content='Walls Research' />
+        <meta property='og:url' content='https://wallsresearch.com' />
+        <meta
+          property='og:description'
+          content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'
+        />
+        <meta property='og:type' content='website' />
+        {/* <meta property='og:image' content={SeoImage} /> */}
+
+        {/* Twitter*/}
+
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@wallsresearch' />
+        <meta name='twitter:title' content='Blogs | Walls Research' />
+        <meta
+          name='twitter:description'
+          content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'
+        />
+        {/* <meta name='twitter:image' content={SeoImage} /> */}
       </Head>
       <div className='py-24 text-firefly-800 dark:text-firefly-100 max-w-7xl mx-auto font-lexend'>
         <div className='text-center'>

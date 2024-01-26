@@ -69,6 +69,46 @@ interface Career {
 const CareerPage = ({ career }) => {
   return (
     <div>
+      <Head>
+        {/* Primary Tags */}
+
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <title>{`${career?.position} | Walls Research`}</title>
+        <meta name='title' content={`${career?.position} | Walls Research`} />
+        <meta
+          name='description'
+          content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'
+        />
+
+        {/* Open Graph / Facebook */}
+
+        <meta
+          property='og:title'
+          content={`${career?.position} | Walls Research`}
+        />
+        <meta property='og:site_name' content='Walls Research' />
+        <meta property='og:url' content='https://wallsresearch.com' />
+        <meta
+          property='og:description'
+          content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'
+        />
+        <meta property='og:type' content='website' />
+        {/* <meta property='og:image' content={SeoImage} /> */}
+
+        {/* Twitter*/}
+
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:site' content='@wallsresearch' />
+        <meta
+          name='twitter:title'
+          content={`${career?.position} | Walls Research`}
+        />
+        <meta
+          name='twitter:description'
+          content='Extensive Knowledge Meets Intelligent Algorithmic Insights for Unmatched Wealth Growth.'
+        />
+        {/* <meta name='twitter:image' content={SeoImage} /> */}
+      </Head>
       {career && (
         <div className='container min-h-screen mx-auto mt-5 py-16 px-3'>
           <div className='flex flex-col items-center justify-center font-lexend space-y-2 text-firefly-800 dark:text-firefly-200'>
