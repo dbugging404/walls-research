@@ -15,7 +15,7 @@ const Header = () => {
         <nav className='max-w-7xl mx-auto flex items-center justify-between px-3'>
           <div>
             <Link href='/' className='hidden md:block'>
-              <Logo />
+              <LogoMobile />
             </Link>
             <Link href='/' className='md:hidden'>
               <LogoMobile />
