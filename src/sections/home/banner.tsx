@@ -15,7 +15,7 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const factChangeInterval = 5000; // 5 seconds
+    const factChangeInterval = 8000; // 5 seconds
     const progressBarInterval = 10; // 1 second
 
     const factChangeIncrement =
@@ -46,7 +46,7 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
   return (
     <div className='py-4'>
       <div className=''>
-        <h2 className='text-3xl font-bold'>Did you know?</h2>
+        <h2 className='text-3xl font-bold pb-8 md:pb-2'>Did you know?</h2>
         <AnimatePresence mode='wait'>
           <motion.div
             key={currentIndex}
