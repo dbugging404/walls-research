@@ -1,32 +1,61 @@
 import { Typography } from '@material-tailwind/react';
-import WallsResearchDesktop from '@/assets/logos/walls-research-full.svg';
+import Logo, { LogoMobile } from '@/components/logo';
 import Image from 'next/image';
 import Link from 'next/link';
-import Download from '@/components/download';
-import {
-  BsYoutube,
-  BsInstagram,
-  BsLinkedin,
-  BsFillEnvelopeAtFill,
-} from 'react-icons/bs';
+import { BsInstagram, BsLinkedin, BsFillEnvelopeAtFill } from 'react-icons/bs';
 import { RiTwitterXFill } from 'react-icons/ri';
 
 const LINKS = [
   {
     title: 'Product',
-    items: ['Overview', 'Features', 'Tutorials'],
+    items: [
+      { name: 'WR Score', url: '/wr-score' },
+      { name: 'Features', url: '/#features' },
+      { name: 'Join BETA', url: '/download' },
+    ],
   },
   {
     title: 'Company',
-    items: ['About us', 'Careers'],
+    items: [
+      // {
+      //   name: 'About Us',
+      //   url: '/about',
+      // },
+      {
+        name: 'Career',
+        url: '/career',
+      },
+      {
+        name: 'Contact',
+        url: '/contact',
+      },
+    ],
   },
   {
     title: 'Resource',
-    items: ['Blog'],
+    items: [
+      {
+        name: 'Blog',
+        url: '/blogs/page/1',
+      },
+    ],
   },
   {
     title: 'Legal',
-    items: ['Disclaimer', 'Privacy', 'Cookies', 'Terms'],
+    items: [
+      {
+        name: 'Privacy Policy',
+        url: '/docs/privacy-policy',
+      },
+      {
+        name: 'Terms & Conditions',
+        url: '/docs/terms-and-conditions',
+      },
+      {
+        name: 'Disclaimer',
+        url: '/docs/disclaimer',
+      },
+    ],
   },
 ];
 
@@ -39,11 +68,7 @@ const Footer = () => {
         <div className='grid grid-cols-1 justify-between gap-4 md:grid-cols-2'>
           <div className='flex py-4 w-full md:flex-col items-start justify-start space-x-2 md:space-x-0'>
             <div className='flex items-center justify-center h-full mx-auto md:mx-0 pb-0 md:pb-2'>
-              <Image
-                src={WallsResearchDesktop}
-                alt='Walls Research'
-                className='p-2 fill-white grayscale brightness-0 invert flex items-center justify-center'
-              />
+              <LogoMobile />
             </div>
             {/* <div className='hidden md:block'>
               <Download />
@@ -62,16 +87,16 @@ const Footer = () => {
                 >
                   {title}
                 </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as='a'
-                      href='#'
-                      className='py-0.5 text-base transition-colors duration-500 font-lexend text-firefly-100 hover:text-asparagus-500'
-                      placeholder={''}
-                    >
-                      {link}
-                    </Typography>
+                {items.map((menu) => (
+                  <li key={menu.name}>
+                    <Link href={menu.url}>
+                      <Typography
+                        className='py-1 text-sm transition-colors duration-500 font-lexend text-firefly-100 hover:text-asparagus-500'
+                        placeholder={''}
+                      >
+                        {menu.name}
+                      </Typography>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -114,30 +139,25 @@ export default Footer;
 
 const SocialIcon = [
   {
-    name: 'Youtube',
-    url: '#',
-    icon: <BsYoutube className='text-xl text-white dark:text-red-500' />,
-  },
-  {
     name: 'Instagram',
-    url: '#',
-    icon: <BsInstagram className='text-xl text-white dark:text-pink-500' />,
+    url: 'https://www.instagram.com/wallsresearch/',
+    icon: <BsInstagram className='text-xl text-pink-500' />,
   },
   {
     name: 'LinkedIn',
-    url: '#',
-    icon: <BsLinkedin className='text-xl text-white dark:text-blue-500' />,
+    url: 'https://www.linkedin.com/in/walls-research-inc-a548b127a/',
+    icon: <BsLinkedin className='text-xl text-blue-500' />,
   },
   {
     name: 'X',
-    url: '#',
-    icon: <RiTwitterXFill className='text-xl text-white dark:text-white' />,
+    url: 'https://x.com/wallsresearch',
+    icon: <RiTwitterXFill className='text-xl text-black dark:text-white' />,
   },
   {
     name: 'Mail',
-    url: 'mailto:#',
+    url: 'mailto:admin@wallsresearch.in',
     icon: (
-      <BsFillEnvelopeAtFill className='text-xl text-white dark:text-gray-200' />
+      <BsFillEnvelopeAtFill className='text-xl text-firefly-950 dark:text-gray-100' />
     ),
   },
 ];

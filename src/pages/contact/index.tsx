@@ -57,11 +57,6 @@ const IndexPage: NextPage = () => {
 export default IndexPage;
 
 const SocialIcon = [
-  //   {
-  //     name: 'Youtube',
-  //     url: '#',
-  //     icon: <BsYoutube className='text-xl text-red-500' />,
-  //   },
   {
     name: 'Instagram',
     url: 'https://www.instagram.com/wallsresearch/',

@@ -54,7 +54,9 @@ const IndexPage: NextPage = ({ blogs }: any) => {
         <Banner />
       </Animate>
       <Animate>
-        <Features />
+        <div id='features' className='scroll-m-14'>
+          <Features />
+        </div>
       </Animate>
       <Animate>
         <Content />
