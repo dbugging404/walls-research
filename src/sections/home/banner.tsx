@@ -15,7 +15,7 @@ const FactsComponent: React.FC<FactsProps> = ({ facts }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const factChangeInterval = 8000; // 5 seconds
+    const factChangeInterval = 8000; // 8 seconds
     const progressBarInterval = 10; // 1 second
 
     const factChangeIncrement =
