@@ -44,6 +44,10 @@ const LINKS = [
     title: 'Legal',
     items: [
       {
+        name: 'Disclaimer',
+        url: '/docs/disclaimer',
+      },
+      {
         name: 'Privacy Policy',
         url: '/docs/privacy-policy',
       },
@@ -52,8 +56,12 @@ const LINKS = [
         url: '/docs/terms-and-conditions',
       },
       {
-        name: 'Disclaimer',
-        url: '/docs/disclaimer',
+        name: 'Cancellation & Refund Policy',
+        url: '/docs/cancellation-and-refund-policy',
+      },
+      {
+        name: 'Shipping & Delivery Policy',
+        url: '/docs/shipping-and-delivery-policy',
       },
     ],
   },
